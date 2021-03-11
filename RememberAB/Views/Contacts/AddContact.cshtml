@@ -1,0 +1,44 @@
+﻿@model RememberAB.Controllers.ContactsController
+@{
+    ViewBag.Title = "AddContact";
+}
+
+<h2>Add your contacts</h2>
+
+
+@{
+    using (Html.BeginForm("AddContact", "Contacts", FormMethod.Post))
+    {
+        <div class="allForms">
+
+            <div class="firstName">
+                <label for="fname">First name: </label>
+                <input type="text" id="firstName" />
+            </div>
+
+            <div class="surname">
+                <label for="Sname">Surname: </label>
+                <input type="text" id="surname" />
+            </div>
+
+            <div class="Age">
+                <label for="date">Datum</label>
+                <input type="date" id="date">
+            </div>
+
+            <div class="email">
+                <label for="email">Email: </label>
+                <input type="email" id="email">
+            </div>
+
+            <div class="email2">
+                <label for="email2">Confirm email: </label>
+                <input type="email" id="email2">
+            </div>
+
+            <button type="submit">Add contact</button>
+
+        </div>
+    }
+}
+

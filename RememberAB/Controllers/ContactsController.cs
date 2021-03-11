@@ -9,19 +9,19 @@ namespace RememberAB.Controllers
     public class ContactsController : Controller
     {
         // GET: Contacts
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult ContactView()
         {
             return View();
         }
 
-        public ActionResult About()
+        [HttpPost]
+        public ActionResult AddContact()
         {
-            ViewBag.Message = "https://www.youtube.com/watch?v=Gs069dndIYk";
-
             return View();
         }
 
-        public ActionResult GetInTouch()
+        public ActionResult DeleteContact()
         {
             return View();
         }

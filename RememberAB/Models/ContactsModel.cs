@@ -9,10 +9,7 @@ namespace RememberAB.Models
     public class ContactsModel
     {
         [Key]
-        private int Id { get; set; }
-        [Required]
-        [StringLength(20, MinimumLength = 1)]
-        public string UserName { get; set; }
+        public int Id { get; set; }
         [Required]
         public string FirstName { get; set; }
         [Required]
@@ -24,8 +21,11 @@ namespace RememberAB.Models
         public DateTime BirthDate { get; set; }
         [EmailAddress]
         public string Email { get; set; }
-        [Required]
-        [StringLength(20, MinimumLength = 8)]
-        public string Password { get; set; }
+        //[Required]
+        //[StringLength(20, MinimumLength = 8)]
+        //public string Password { get; set; }
+        //[Required]
+        //[StringLength(20, MinimumLength = 1)]
+        //public string UserName { get; set; }
     }
 }
