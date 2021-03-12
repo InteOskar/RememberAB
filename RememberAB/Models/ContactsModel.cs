@@ -17,7 +17,6 @@ namespace RememberAB.Models
         [Required]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
         ApplyFormatInEditMode = true)]
-        [Range(0, 200)]
         public DateTime BirthDate { get; set; }
         [EmailAddress]
         public string Email { get; set; }

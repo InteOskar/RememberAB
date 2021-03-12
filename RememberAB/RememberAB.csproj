@@ -136,6 +136,14 @@
     <Compile Include="Migrations\202103101423127_Initial.designer.cs">
       <DependentUpon>202103101423127_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103120857303_test.cs" />
+    <Compile Include="Migrations\202103120857303_test.Designer.cs">
+      <DependentUpon>202103120857303_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103120928491_fixed date.cs" />
+    <Compile Include="Migrations\202103120928491_fixed date.Designer.cs">
+      <DependentUpon>202103120928491_fixed date.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContactsModel.cs" />
     <Compile Include="Models\RememberABContext.cs" />
@@ -177,8 +185,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contacts\ContactView.cshtml" />
-    <Content Include="Views\Contacts\Fusk.cshtml" />
     <Content Include="Views\Contacts\AddContact.cshtml" />
+    <Content Include="Views\Contacts\Fusk.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -199,6 +207,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103101423127_Initial.resx">
       <DependentUpon>202103101423127_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103120857303_test.resx">
+      <DependentUpon>202103120857303_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103120928491_fixed date.resx">
+      <DependentUpon>202103120928491_fixed date.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -2,15 +2,14 @@
 @{
     ViewBag.Title = "AddContact";
 }
+<header>
+    <h2>Add your contacts</h2>
+</header>
 
-<h2>Add your contacts</h2>
-
-
-@{
-    using (Html.BeginForm("AddContact", "Contacts", FormMethod.Post))
-    {
+<body>
+@using (Html.BeginForm())
+{
         <div class="allForms">
-
             <div class="firstName">
                 <label for="fname">First name: </label>
                 <input type="text" id="firstName" />
@@ -22,7 +21,7 @@
             </div>
 
             <div class="Age">
-                <label for="date">Datum</label>
+                <label for="date">Datum: </label>
                 <input type="date" id="date">
             </div>
 
@@ -31,14 +30,12 @@
                 <input type="email" id="email">
             </div>
 
-            <div class="email2">
+            @*<div class="email2">
                 <label for="email2">Confirm email: </label>
                 <input type="email" id="email2">
-            </div>
+            </div>*@
 
-            <button type="submit">Add contact</button>
-
+            <button type="submit" @Html.Action("AddContact", "Contacts", FormMethod.Post)>Add contact</button>
         </div>
-    }
 }
-
+</body>
