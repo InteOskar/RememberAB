@@ -16,8 +16,8 @@ namespace RememberAB.Controllers
             return View();
         }
 
-        //[HttpPost]
-        public ActionResult AddContact(ContactsModel contact)
+        [HttpPost]
+        public ActionResult Create(ContactsModel contact)
         {
             return View();
         }
@@ -34,9 +34,13 @@ namespace RememberAB.Controllers
 
         public ActionResult CreateContact(ContactsModel contact)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(contact);
+            }
             var contactsManager = new ContactsManager();
-            contactsManager.ContactsAdd(contact);
-            return View("ContactView");
+                contactsManager.ContactsAdd(contact);
+                return RedirectToAction("ContactView");
         }
     }
 }
