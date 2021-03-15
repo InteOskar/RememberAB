@@ -144,6 +144,10 @@
     <Compile Include="Migrations\202103120928491_fixed date.Designer.cs">
       <DependentUpon>202103120928491_fixed date.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103151030186_Updated requured.cs" />
+    <Compile Include="Migrations\202103151030186_Updated requured.Designer.cs">
+      <DependentUpon>202103151030186_Updated requured.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContactsModel.cs" />
     <Compile Include="Models\RememberABContext.cs" />
@@ -186,7 +190,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contacts\ContactView.cshtml" />
     <Content Include="Views\Contacts\AddContact.cshtml" />
-    <Content Include="Views\Contacts\Fusk.cshtml" />
+    <Content Include="Views\Contacts\ContactDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -213,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103120928491_fixed date.resx">
       <DependentUpon>202103120928491_fixed date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103151030186_Updated requured.resx">
+      <DependentUpon>202103151030186_Updated requured.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

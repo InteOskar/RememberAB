@@ -1,12 +1,35 @@
-﻿@model RememberAB.Controllers.ContactsController
+﻿@model List<RememberAB.Models.ContactsModel>
 @{
-    ViewBag.Title = "ContactsView";
+    ViewBag.Title = "ContactView";
 }
 
 <h2>Contact Book</h2>
 
-<form class="searchForm">
-    <input type="Text" placeholder="Search" name="search">
-    <button type="submit">Search</button>
-</form>
+@*<form class="searchForm">
+        <input type="Text" placeholder="Search" name="search">
+        <button type="submit">Search</button>
+    </form>*@
+
+
+@foreach (var contact in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => contact.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => contact.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => contact.BirthDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => contact.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "ContactDelete", new { id = contact.Id })
+        </td>
+    </tr>
+    <br />
+}
 

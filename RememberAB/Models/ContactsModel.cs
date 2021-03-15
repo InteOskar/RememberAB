@@ -14,10 +14,11 @@ namespace RememberAB.Models
         public string FirstName { get; set; }
         [Required]
         public string Surname { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Dateformat: yyyy-mm-dd")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
         ApplyFormatInEditMode = true)]
         public DateTime BirthDate { get; set; }
+        [Required(ErrorMessage = "Enter a valid email with @")]
         [EmailAddress]
         public string Email { get; set; }
         //[Required]

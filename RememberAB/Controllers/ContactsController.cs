@@ -11,10 +11,10 @@ namespace RememberAB.Controllers
     public class ContactsController : Controller
     {
         // GET: Contacts
-        public ActionResult ContactView()
-        {
-            return View();
-        }
+        //public ActionResult ContactView()
+        //{
+        //    return View();
+        //}
 
         [HttpPost]
         public ActionResult Create(ContactsModel contact)
@@ -22,12 +22,7 @@ namespace RememberAB.Controllers
             return View();
         }
 
-        public ActionResult DeleteContact()
-        {
-            return View();
-        }
-
-        public ActionResult Fusk(ContactsModel contact)
+        public ActionResult AddContact()
         {
             return View();
         }
@@ -41,6 +36,20 @@ namespace RememberAB.Controllers
             var contactsManager = new ContactsManager();
                 contactsManager.ContactsAdd(contact);
                 return RedirectToAction("ContactView");
+        }
+        [HttpGet]
+        public ActionResult ContactView()
+        {
+            var contactsManager = new ContactsManager();
+            var getAll = contactsManager.GetContacts();
+            return View(getAll);
+        }
+        //[ActionName("contact-delete")]
+        public ActionResult ContactDelete(int id)
+        {
+            var contactManager = new ContactsManager();
+            contactManager.ContactsDelete(id);
+            return RedirectToAction("ContactView");
         }
     }
 }
