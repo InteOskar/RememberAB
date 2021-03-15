@@ -343,3 +343,5 @@ C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\Reme
 C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\obj\Debug\RememberAB.dll
 C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\obj\Debug\RememberAB.pdb
 C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\obj\Debug\RememberAB.Migrations.Updatedrequured.resources
+C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\obj\Debug\RememberAB.Migrations.CustomRange.resources
+C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\obj\Debug\RememberAB.Migrations.Emailverification.resources

@@ -148,8 +148,17 @@
     <Compile Include="Migrations\202103151030186_Updated requured.Designer.cs">
       <DependentUpon>202103151030186_Updated requured.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103151628239_CustomRange.cs" />
+    <Compile Include="Migrations\202103151628239_CustomRange.Designer.cs">
+      <DependentUpon>202103151628239_CustomRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103151654537_Email verification.cs" />
+    <Compile Include="Migrations\202103151654537_Email verification.Designer.cs">
+      <DependentUpon>202103151654537_Email verification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContactsModel.cs" />
+    <Compile Include="Models\CustomDateRangeAttribute.cs" />
     <Compile Include="Models\RememberABContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -220,6 +229,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103151030186_Updated requured.resx">
       <DependentUpon>202103151030186_Updated requured.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103151628239_CustomRange.resx">
+      <DependentUpon>202103151628239_CustomRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103151654537_Email verification.resx">
+      <DependentUpon>202103151654537_Email verification.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

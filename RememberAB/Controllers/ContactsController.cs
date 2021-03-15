@@ -31,7 +31,7 @@ namespace RememberAB.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(contact);
+                return RedirectToAction("AddContact");
             }
             var contactsManager = new ContactsManager();
                 contactsManager.ContactsAdd(contact);
