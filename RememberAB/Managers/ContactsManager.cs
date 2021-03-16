@@ -35,5 +35,13 @@ namespace RememberAB.Managers
                 return db.ContactsModels.ToList();
             }
         }
+
+        public void ContactsSearch(string firstName)
+        {
+            using (var db = new RememberABContext())
+            {
+                var contact = db.ContactsModels.Where(c => c.FirstName.Contains(firstName) || firstName == null).ToList();
+            }
+        }
     }
 }

@@ -5,13 +5,16 @@
 
 <h2>Contact Book</h2>
 
-@*<form class="searchForm">
-        <input type="Text" placeholder="Search" name="search">
-        <button type="submit">Search</button>
-    </form>*@
+@using (Html.BeginForm("ContactView", "Contacts", FormMethod.Post))
+{
+<div>
+    <input type="Text" id="firstName" name="firstName">
+    <button type="submit" value="submit">Search</button>
+</div>
+}
 
 
-@foreach (var contact in Model)
+@*@foreach (var contact in Model)
 {
     <tr>
         <td>
@@ -31,5 +34,14 @@
         </td>
     </tr>
     <br />
+}*@
+
+@{
+    if (ViewBag.SearchKey != null)
+    {
+        <span>
+            Search Key: @ViewBag.SearchKey
+        </span>
+    }
 }
 
