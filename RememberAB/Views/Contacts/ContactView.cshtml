@@ -7,34 +7,58 @@
 
 @using (Html.BeginForm("ContactView", "Contacts", FormMethod.Post))
 {
-<div>
-    <input type="Text" id="firstName" name="firstName">
-    <button type="submit" value="submit">Search</button>
-</div>
+    <span>Search by first name:</span> @Html.TextBox("firstName")
+    <input type="submit" value="Search" />
+    <br />
+    <table>
+        <tr>
+            <th>First name</th>
+            <th>Surname</th>
+            <th>Date of birth</th>
+            <th>Email</th>
+        </tr>
+        @foreach (var contact in Model)
+        {
+        <tr>
+            <td>@contact.FirstName</td>
+            <td>@contact.Surname</td>
+            <td>@Html.DisplayFor(modelItem => contact.BirthDate)</td>
+            <td>@contact.Email</td>
+            <td>@Html.ActionLink("Delete", "ContactDelete", new { id = contact.Id })</td>
+        </tr>
+        }
+    </table>
 }
 
+@*<form asp-controller="Contacts" asp-action="ContactView" method="post">
+        <p>
+            <input type="text" name="SearchString" />
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
 
-@*@foreach (var contact in Model)
-{
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => contact.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => contact.Surname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => contact.BirthDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => contact.Email)
-        </td>
-        <td>
-            @Html.ActionLink("Delete", "ContactDelete", new { id = contact.Id })
-        </td>
-    </tr>
-    <br />
-}*@
+
+    @foreach (var contact in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => contact.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => contact.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => contact.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => contact.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "ContactDelete", new { id = contact.Id })
+            </td>
+        </tr>
+        <br />
+    }*@
 
 @{
     if (ViewBag.SearchKey != null)
