@@ -9,6 +9,8 @@
 {
     <span>Search by first name:</span> @Html.TextBox("firstName")
     <input type="submit" value="Search" />
+    @Html.ActionLink("Clear search", "ContactView")
+
     <br />
     <table>
         <tr>
@@ -19,13 +21,13 @@
         </tr>
         @foreach (var contact in Model)
         {
-        <tr>
-            <td>@contact.FirstName</td>
-            <td>@contact.Surname</td>
-            <td>@Html.DisplayFor(modelItem => contact.BirthDate)</td>
-            <td>@contact.Email</td>
-            <td>@Html.ActionLink("Delete", "ContactDelete", new { id = contact.Id })</td>
-        </tr>
+            <tr>
+                <td>@contact.FirstName</td>
+                <td>@contact.Surname</td>
+                <td>@Html.DisplayFor(modelItem => contact.BirthDate)</td>
+                <td>@contact.Email</td>
+                <td>@Html.ActionLink("Delete", "ContactDelete", new { id = contact.Id })</td>
+            </tr>
         }
     </table>
 }
@@ -60,12 +62,12 @@
         <br />
     }*@
 
-@{
-    if (ViewBag.SearchKey != null)
-    {
-        <span>
-            Search Key: @ViewBag.SearchKey
-        </span>
-    }
-}
+@*@{
+        if (ViewBag.SearchKey != null)
+        {
+            <span>
+                Search Key: @ViewBag.SearchKey
+            </span>
+        }
+    }*@
 

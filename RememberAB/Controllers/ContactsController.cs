@@ -43,21 +43,21 @@ namespace RememberAB.Controllers
         public ActionResult ContactView(string firstName)
         {
             var contactsManager = new ContactsManager();
+            var getAll = contactsManager.GetContacts();
+
             if (firstName == "")
             {
-                var getAll = contactsManager.GetContacts();
+                contactsManager.GetContacts();
                 return View(getAll);
                 
             }
             else
             {
-                var getContact = contactsManager.GetContacts().Where(x => x.FirstName.ToLower() == firstName).ToList();
+                var getContact = contactsManager.GetContacts().Where(x => x.FirstName.ToLower() == firstName.ToLower()).ToList();
                 return View(getContact);
             }
         }
 
-
-        [HttpDelete]
         public ActionResult ContactDelete(int id)
         {
             var contactManager = new ContactsManager();
@@ -69,14 +69,5 @@ namespace RememberAB.Controllers
         {
             return View();
         }
-
-        //[HttpPost]
-        //public ActionResult ContactView(string firstName)
-        //{
-        //    var contactManager = new ContactsManager();
-        //    contactManager.ContactsSearch(firstName);
-        //    ViewBag.SearchKey = contactManager;
-        //    return View();
-        //}
     }
 }
