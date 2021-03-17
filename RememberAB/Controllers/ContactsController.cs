@@ -48,13 +48,21 @@ namespace RememberAB.Controllers
             if (firstName == "")
             {
                 contactsManager.GetContacts();
-                return View(getAll);
-                
+                return View(getAll);    
             }
             else
             {
                 var getContact = contactsManager.GetContacts().Where(x => x.FirstName.ToLower() == firstName.ToLower()).ToList();
+                
+                if (getContact.Count >= 1)
+                {
                 return View(getContact);
+                }
+                else 
+                {
+                    getContact = contactsManager.GetContacts().Where(x => x.Surname.ToLower() == firstName.ToLower()).ToList();
+                    return View(getContact);
+                }
             }
         }
 

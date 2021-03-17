@@ -4,6 +4,7 @@
 }
 
 <h2>Contact Book</h2>
+<br />
 
 @using (Html.BeginForm("ContactView", "Contacts", FormMethod.Post))
 {
@@ -11,6 +12,7 @@
     <input type="submit" value="Search" />
     @Html.ActionLink("Clear search", "ContactView")
 
+    <br />
     <br />
     <table>
         <tr>
@@ -31,43 +33,3 @@
         }
     </table>
 }
-
-@*<form asp-controller="Contacts" asp-action="ContactView" method="post">
-        <p>
-            <input type="text" name="SearchString" />
-            <input type="submit" value="Filter" />
-        </p>
-    </form>
-
-
-    @foreach (var contact in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => contact.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => contact.Surname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => contact.BirthDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => contact.Email)
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "ContactDelete", new { id = contact.Id })
-            </td>
-        </tr>
-        <br />
-    }*@
-
-@*@{
-        if (ViewBag.SearchKey != null)
-        {
-            <span>
-                Search Key: @ViewBag.SearchKey
-            </span>
-        }
-    }*@
-
