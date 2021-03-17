@@ -8,7 +8,7 @@
 
 @using (Html.BeginForm("ContactView", "Contacts", FormMethod.Post))
 {
-    <span>Search by first name:</span> @Html.TextBox("firstName")
+    <span>Search contact:</span> @Html.TextBox("firstName")
     <input type="submit" value="Search" />
     @Html.ActionLink("Clear search", "ContactView")
 

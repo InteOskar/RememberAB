@@ -10,16 +10,11 @@ namespace RememberAB.Controllers
 {
     public class ContactsController : Controller
     {
-        [HttpPost]
-        public ActionResult Create(ContactsModel contact)
-        {
-            return View();
-        }
-
         public ActionResult AddContact()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult CreateContact(ContactsModel contact)
         {
@@ -31,6 +26,7 @@ namespace RememberAB.Controllers
                 contactsManager.ContactsAdd(contact);
                 return RedirectToAction("ContactView");
         }
+
         [HttpGet]
         public ActionResult ContactView()
         {
@@ -61,7 +57,15 @@ namespace RememberAB.Controllers
                 else 
                 {
                     getContact = contactsManager.GetContacts().Where(x => x.Surname.ToLower() == firstName.ToLower()).ToList();
-                    return View(getContact);
+                    if (getContact.Count >= 1)
+                    {
+                        return View(getContact);
+                    }
+                    else
+                    {
+                        getContact = contactsManager.GetContacts().Where(x => x.Email.ToLower() == firstName.ToLower()).ToList();
+                        return View(getContact);
+                    }
                 }
             }
         }

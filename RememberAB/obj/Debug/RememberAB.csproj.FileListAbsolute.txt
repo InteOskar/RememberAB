@@ -333,7 +333,6 @@ C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\Reme
 C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\bin\Newtonsoft.Json.xml
 C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\bin\Antlr3.Runtime.pdb
 C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\obj\Debug\RememberAB.csprojAssemblyReference.cache
 C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\obj\Debug\RememberAB.Migrations.Initial.resources
 C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\obj\Debug\RememberAB.Migrations.test.resources
 C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\obj\Debug\RememberAB.Migrations.fixeddate.resources
@@ -435,3 +434,4 @@ C:\Users\SEVON\Desktop\Skola\Projects\Visual Studio Projects\ContactList\Remembe
 C:\Users\SEVON\Desktop\Skola\Projects\Visual Studio Projects\ContactList\RememberAB\RememberAB\bin\Antlr3.Runtime.pdb
 C:\Users\SEVON\Desktop\Skola\Projects\Visual Studio Projects\ContactList\RememberAB\RememberAB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\SEVON\Desktop\Skola\Projects\Visual Studio Projects\ContactList\RememberAB\RememberAB\obj\Debug\RememberAB.csproj.CopyComplete
+C:\Users\andre\Documents\Anteckningar\Grupparbeten\RememberAllAB\RememberAB\RememberAB\obj\Debug\RememberAB.csprojAssemblyReference.cache
