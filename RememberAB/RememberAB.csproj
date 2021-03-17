@@ -199,6 +199,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contacts\ContactView.cshtml" />
     <Content Include="Views\Contacts\AddContact.cshtml" />
+    <Content Include="Views\Shared\EWFPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
