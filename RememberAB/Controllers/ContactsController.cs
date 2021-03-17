@@ -51,7 +51,7 @@ namespace RememberAB.Controllers
             }
             else
             {
-                var getContact = contactsManager.GetContacts().Where(x => x.FirstName == firstName).ToList();
+                var getContact = contactsManager.GetContacts().Where(x => x.FirstName.ToLower() == firstName).ToList();
                 return View(getContact);
             }
         }
